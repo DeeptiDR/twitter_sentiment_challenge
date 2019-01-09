@@ -3,7 +3,7 @@ import tweepy
 from textblob import TextBlob
 
 csvData=[['Tweets','sentimentAnalysis']]
-with open('people.csv','w') as csvFile:
+with open('fileCSV.csv','w') as csvFile:
 	writer=csv.writer(csvFile)
 	writer.writerows(csvData)
   
@@ -32,7 +32,7 @@ for tweet in public_tweets:
 
     row=[[analysis, analysis.sentiment]]
 
-    with open('people.csv', 'a') as csvFile:
+    with open('fileCSV.csv', 'a') as csvFile:
     	writer = csv.writer(csvFile)
     	writer.writerows(row)
       
